@@ -44,7 +44,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/"                
+                href="/blog"                
                 className="font-medium tracking-wide text-neutral-600 transition-colors duration-200 hover:text-deep-purple-accent-400 "
               >
                 Blog
@@ -53,7 +53,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/"               
+                href="/about"               
                 className="font-medium tracking-wide text-neutral-600 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
                 About Us
@@ -63,7 +63,7 @@ const Navbar = () => {
             
             <li>
               <Link
-                href="/"                
+                href="/contact"                
                 className="font-medium tracking-wide text-neutral-600 transition-colors duration-200 hover:text-deep-purple-accent-400 "
               >
                 Contact Us
@@ -152,7 +152,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/"
+                          href="/blog"
                           aria-label="Our product"
                           title="Our product"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -162,7 +162,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/"                          
+                          href="/about"                          
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           About Us
@@ -170,7 +170,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/"
+                          href="/contact"
                          
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >

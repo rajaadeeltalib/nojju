@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ImageOne from "../../../public/image1.jpg";
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -7,12 +8,12 @@ const Hero = () => {
       <div className=" mt-6">
         <div className="flex justify-between mx-6 items-center">
           <div className="font-semibold text-md text-orange-500">LATEST</div>
-          <div className="font-semibold text-md border-b-2 border-b-orange-500 ">VIEW ALL</div>
+          <div className="font-semibold text-md border-b-2 border-b-orange-500 "><Link href={"/blog"}>VIEW ALL</Link></div>
         </div>
       </div>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:justify-items-center">
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog/blog1"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -26,7 +27,7 @@ const Hero = () => {
         </div>
         {/* blog 2 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -40,7 +41,7 @@ const Hero = () => {
         </div>
         {/* blog 3 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -54,7 +55,7 @@ const Hero = () => {
         </div>
         {/* blog 4 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -68,7 +69,7 @@ const Hero = () => {
         </div>
         {/* blog 5 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -82,7 +83,7 @@ const Hero = () => {
         </div>
         {/* blog 6 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>

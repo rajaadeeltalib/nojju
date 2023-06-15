@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ImageOne from "../../../public/image1.jpg";
+import Link from "next/link";
 
 const MustRead = () => {
   return (
@@ -9,7 +10,7 @@ const MustRead = () => {
       <div className='border border-t  border-gray-400 mx-6 my-12'></div> 
         <div className="flex justify-between mx-6">
           <div className="font-semibold text-md text-orange-500">MUST READ</div>
-          <div className="font-semibold text-md border-b-2 border-b-orange-500">VIEW ALL</div>
+          <div className="font-semibold text-md border-b-2 border-b-orange-500"><Link href={"/blog"}>VIEW ALL</Link></div>
         </div>
       </div>
       <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center">

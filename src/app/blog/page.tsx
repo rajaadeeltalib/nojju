@@ -1,6 +1,6 @@
-import Card from "../components/Card";
 import Image from "next/image";
-import ImageOne from "../../../public/image1.jpg";
+import ImageOne from "../../../public/image1.jpg"
+import Link from "next/link";
 
 const AllBlogs = () => {
   return (
@@ -10,7 +10,7 @@ const AllBlogs = () => {
       </div>
       <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3">
       <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+          <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -24,7 +24,7 @@ const AllBlogs = () => {
         </div>
         {/* blog 2 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -38,7 +38,7 @@ const AllBlogs = () => {
         </div>
         {/* blog 3 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -52,7 +52,7 @@ const AllBlogs = () => {
         </div>
         {/* blog 4 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -66,7 +66,7 @@ const AllBlogs = () => {
         </div>
         {/* blog 5 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
@@ -80,7 +80,7 @@ const AllBlogs = () => {
         </div>
         {/* blog 6 */}
         <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]">
-          <Image src={ImageOne} alt="Image One" className="rounded-xl"/>
+        <Link href={"/blog"}><Image src={ImageOne} alt="Image One" className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">June 14, 2023</h4>
           <h3 className="my-4 text-sm text-orange-500">NEWS</h3>
