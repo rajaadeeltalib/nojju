@@ -27,11 +27,11 @@ const Navbar = () => {
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
             </svg>
-            <span className="ml-2 text-xl font-bold tracking-wide ">
-              Company
+            <span className="ml-2 text-xl font-bold tracking-wide text-orange-500">
+              C<span className="text-neutral-600">ompany</span>
             </span>
           </Link>
-          <ul className="items-center hidden space-x-8 lg:flex ">
+          <ul className="items-center hidden lg:flex ">
             
             <li>
               <Link
@@ -40,7 +40,7 @@ const Navbar = () => {
               >
                 Home
               </Link>
-              <span className="text-orange-500 font-bold mx-2">|</span>
+              <span className="text-orange-500 font-bold px-8">|</span>
             </li>
             <li>
               <Link
@@ -49,7 +49,7 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-            <span className="text-orange-500 font-bold mx-2">|</span>
+            <span className="text-orange-500 font-bold px-8">|</span>
             </li>
             <li>
               <Link
@@ -58,7 +58,7 @@ const Navbar = () => {
               >
                 About Us
               </Link>
-              <span className="text-orange-500 font-bold mx-2">|</span>
+              <span className="text-orange-500 font-bold px-8">|</span>
             </li>
             
             <li>
