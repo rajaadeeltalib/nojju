@@ -171,8 +171,8 @@ const BlogPage = async () => {
             </div>
           </div>
           {detailRead.map((read: any, index: number) => (
-            <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center">
-              <div className="lg:max-w-[50%] text-justify" key={index}>
+            <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center" key={index}>
+              <div className="lg:max-w-[50%] text-justify" >
                 <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
                   {read.title}
                 </h1>
