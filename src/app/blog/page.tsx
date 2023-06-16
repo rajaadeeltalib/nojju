@@ -25,7 +25,12 @@ const AllBlogs = async() => {
       {blogsPosts.map((posts:any, index:number) => (
 
       <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]" key={index}>
-          <Link href={"/blog/blog1"}><Image src={urlForImage(posts.image).url()} alt="Image One" width={380}
+          <Link href={{
+                  pathname: `/blog/[Slug.current]`,
+                  query: { data: posts.slug.current },
+                }}
+                as={`/blog/${posts.slug.current}`}
+              ><Image src={urlForImage(posts.image).url()} alt="Image One" width={380}
                   height={253} className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>

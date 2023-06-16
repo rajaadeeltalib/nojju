@@ -5,44 +5,49 @@ import { client } from "../../../lib/sanityClient";
 import { urlForImage } from "../../../../sanity/lib/image";
 import PortableText from "react-portable-text";
 
-
-const getdetailPost = async () => {
-  const res = await client.fetch(`*[_type=='posts']`);
-
-  return res;
-};
-const getdetailRead = async () => {
-  const res = await client.fetch(`*[_type=='posts' && mustread=='Must Read']`);
+const getdetailPost = async (slug: any) => {
+  const res = await client.fetch(
+    `*[_type=='posts' && slug.current == '${slug.params.blog}']`
+  );
 
   return res;
 };
-const getdetailFeatured = async () => {
-  const res = await client.fetch(`*[_type=='posts' && featured=='Featured']`);
+const getdetailRead = async (slug: any) => {
+  const res = await client.fetch(
+    `*[_type=='posts' && mustread=='Must Read' || slug.current == '${slug.params.blog}']`
+  );
+
+  return res;
+};
+const getdetailFeatured = async (slug: any) => {
+  const res = await client.fetch(
+    `*[_type=='posts' && featured=='Featured' || slug.current == '${slug.params.blog}']`
+  );
 
   return res;
 };
 
-const BlogPage = async () => {
-  const detailPost = await getdetailPost();
-  const detailRead = await getdetailRead();
-  const detailFeatured = await getdetailFeatured();
+const BlogPage = async (slug: any) => {
+  const detailPost = await getdetailPost(slug);
+  const detailRead = await getdetailRead(slug);
+  const detailFeatured = await getdetailFeatured(slug);
   return (
     <div>
-      {detailPost.map((posts: any) => (
+      {/* {detailPost.map((posts: any) => ( */}
         <div
           className="container mx-auto my-10 px-4 flex flex-col md:flex-row md: gap-x-6 lg:flex-row justify-between"
-          key={posts.id}
+          // key={posts.id}
         >
           <div className="md:max-w-[30%] md:my-12">
-            <Link href={"/blog/blog1"}>
+            
               <Image
-                src={urlForImage(posts.image).url()}
+                src={urlForImage(detailPost[0].image).url()}
                 alt="Image One"
                 width={380}
                 height={253}
                 className="rounded-xl"
               />
-            </Link>
+            
             <div className="border border-gray-500 my-10 px-4">
               <h2 className="md:text-md md:font-bold py-4 text-orange-500">
                 Table of Contents
@@ -56,7 +61,7 @@ const BlogPage = async () => {
                     projectId={
                       process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "39d4qf6j"
                     }
-                    content={posts.tableofcontent}
+                    content={detailPost[0].tableofcontent}
                     serializers={{
                       h1: (props: any) => (
                         <h1 className="text-3xl font-bold my-5" {...props} />
@@ -91,7 +96,7 @@ const BlogPage = async () => {
           <div className="md:max-w-[40%] md:my-12">
             {" "}
             <h1 className=" text-xl font-semibold border-b-2 border-b-orange-500 text-justify">
-              {posts.title}
+              {detailPost[0].title}
             </h1>
             <div className="my-8 text-justify">
               <p className="text-justify text-gray-600 ">
@@ -102,7 +107,7 @@ const BlogPage = async () => {
                   projectId={
                     process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "39d4qf6j"
                   }
-                  content={posts.body}
+                  content={detailPost[0].body}
                   serializers={{
                     h1: (props: any) => (
                       <h1 className="text-3xl font-bold my-5" {...props} />
@@ -126,9 +131,9 @@ const BlogPage = async () => {
               </p>
               <div className="flex justify-center my-8">
                 <button className="bg-orange-500 text-white text-lg font-bold px-4 py-4 rounded-full">
-                  <Link href={posts.link}  target="_blank">
-                  Buy From Amazon
-  </Link>
+                  <Link href={detailPost[0].link} target="_blank">
+                    Buy From Amazon
+                  </Link>
                 </button>
               </div>
             </div>
@@ -138,34 +143,42 @@ const BlogPage = async () => {
             <h4 className="border-b-2 border-b-orange-500 font-semibold text-md md:mx-4 lg:mx-0">
               Featured
             </h4>
-          {detailPost.map((posts: any) => (
-            <div className="mt-12 mx-6 lg:mx-0  max-w-[300px]" key={posts.id}>
-
-<Link href={"/blog/blog1"}>
-              <Image
-                src={urlForImage(posts.image).url()}
-                alt="Image One"
-                width={380}
-                height={253}
-                className="rounded-xl"
-              />
-            </Link>
-          <div className="flex justify-between items-center px-2">
-            <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>
-            <h3 className="my-4 text-sm text-orange-500">{posts.category}</h3>
-          </div>
-          <div className="">
-            <h1 className="text-md font-semibold border-b-2 border-b-orange-500 text-justify">
-              {posts.title}
-            </h1>
-          </div>
-        </div>
-            
-            ))}
+            {/* {detailFeatured.map((posts: any) => ( */}
+              <div className="mt-12 mx-6 lg:mx-0  max-w-[300px]" 
+              // key={posts.id}
+              >
+                <Link
+                  href={{
+                    pathname: `/blog/[Slug.current]`,
+                    query: { data: detailFeatured[0].slug.current },
+                  }}
+                  as={`/blog/${detailFeatured[0].slug.current}`}
+                >
+                  <Image
+                    src={urlForImage(detailFeatured[0].image).url()}
+                    alt="Image One"
+                    width={380}
+                    height={253}
+                    className="rounded-xl"
+                  />
+                </Link>
+                <div className="flex justify-between items-center px-2">
+                  <h4 className="text-[12px] text-neutral-600">{detailFeatured[0].date}</h4>
+                  <h3 className="my-4 text-sm text-orange-500">
+                    {detailFeatured[0].category}
+                  </h3>
+                </div>
+                <div className="">
+                  <h1 className="text-md font-semibold border-b-2 border-b-orange-500 text-justify">
+                    {detailFeatured[0].title}
+                  </h1>
+                </div>
+              </div>
+            {/* // ))} */}
           </div>
           {/* div closed */}
         </div>
-      ))}
+      {/* // ))} */}
 
       <div>
         <div className="container mx-auto ">
@@ -180,18 +193,27 @@ const BlogPage = async () => {
               </div>
             </div>
           </div>
-          {detailRead.map((read: any) => (
-            <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center" key={read.id}>
-              <div className="lg:max-w-[50%] text-justify" >
+          {/* {detailRead.map((read: any) => ( */}
+            <div
+              className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center"
+              // key={read.id}
+            >
+              <div className="lg:max-w-[50%] text-justify">
                 <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
-                  {read.title}
+                  {detailRead[0].title}
                 </h1>
-                <p className="text-gray-600">{read.description}</p>
+                <p className="text-gray-600">{detailRead[0].description}</p>
               </div>
               <div className="mt-12 mx-6 lg:mx-0">
-                <Link href={"/blog/blog1"}>
+                <Link
+                  href={{
+                    pathname: `/blog/[Slug.current]`,
+                    query: { data: detailRead[0].slug.current },
+                  }}
+                  as={`/blog/${detailRead[0].slug.current}`}
+                >
                   <Image
-                    src={urlForImage(read.image).url()}
+                    src={urlForImage(detailRead[0].image).url()}
                     alt="Image One"
                     width={600}
                     height={800}
@@ -200,14 +222,14 @@ const BlogPage = async () => {
                 </Link>
                 {/* <Image src={ImageOne} alt="Image One" width={600} height={800}/> */}
                 <div className="flex justify-between items-center text-slate-400">
-                  <h4 className="text-[12px]">{read.date}</h4>
+                  <h4 className="text-[12px]">{detailRead[0].date}</h4>
                   <h3 className="my-4 text-sm text-orange-500">
-                    {read.category}
+                    {detailRead[0].category}
                   </h3>
                 </div>
               </div>
             </div>
-          ))}
+          {/* // ))} */}
           ;
         </div>
       </div>
