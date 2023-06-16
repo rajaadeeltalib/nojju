@@ -28,10 +28,10 @@ const BlogPage = async () => {
   const detailFeatured = await getdetailFeatured();
   return (
     <div>
-      {detailPost.map((posts: any, index: number) => (
+      {detailPost.map((posts: any) => (
         <div
           className="container mx-auto my-10 px-4 flex flex-col md:flex-row md: gap-x-6 lg:flex-row justify-between"
-          key={index}
+          key={posts.id}
         >
           <div className="md:max-w-[30%] md:my-12">
             <Link href={"/blog/blog1"}>
@@ -136,8 +136,8 @@ const BlogPage = async () => {
             <h4 className="border-b-2 border-b-orange-500 font-semibold text-md md:mx-4 lg:mx-0">
               Featured
             </h4>
-          {detailPost.map((posts: any, index: number) => (
-            <div className="mt-12 mx-6 lg:mx-0  max-w-[300px]" key={index}>
+          {detailPost.map((posts: any) => (
+            <div className="mt-12 mx-6 lg:mx-0  max-w-[300px]" key={posts.id}>
 
           <Image src={ImageOne} alt="Image One" className="rounded-xl" />
           <div className="flex justify-between items-center px-2">
@@ -170,8 +170,8 @@ const BlogPage = async () => {
               </div>
             </div>
           </div>
-          {detailRead.map((read: any, index: number) => (
-            <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center" key={index}>
+          {detailRead.map((read: any) => (
+            <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center" key={read.id}>
               <div className="lg:max-w-[50%] text-justify" >
                 <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
                   {read.title}
