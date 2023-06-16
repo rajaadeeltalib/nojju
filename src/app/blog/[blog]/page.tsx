@@ -126,7 +126,9 @@ const BlogPage = async () => {
               </p>
               <div className="flex justify-center my-8">
                 <button className="bg-orange-500 text-white text-lg font-bold px-4 py-4 rounded-full">
+                  <Link href={posts.link}  target="_blank">
                   Buy From Amazon
+  </Link>
                 </button>
               </div>
             </div>
@@ -139,7 +141,15 @@ const BlogPage = async () => {
           {detailPost.map((posts: any) => (
             <div className="mt-12 mx-6 lg:mx-0  max-w-[300px]" key={posts.id}>
 
-          <Image src={ImageOne} alt="Image One" className="rounded-xl" />
+<Link href={"/blog/blog1"}>
+              <Image
+                src={urlForImage(posts.image).url()}
+                alt="Image One"
+                width={380}
+                height={253}
+                className="rounded-xl"
+              />
+            </Link>
           <div className="flex justify-between items-center px-2">
             <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>
             <h3 className="my-4 text-sm text-orange-500">{posts.category}</h3>
