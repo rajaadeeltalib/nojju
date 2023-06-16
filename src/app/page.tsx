@@ -40,8 +40,8 @@ export default async function Home() {
         </div>
       </div>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:justify-items-center">
-               {latestPosts.map((posts:any, index:number) => (
-        <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]" key={index}>          
+               {latestPosts.map((posts:any) => (
+        <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]" key={posts.id}>          
         <Link href={"/blog/blog1"}><Image src={urlForImage(posts.image).url()} alt="Image One" width={380}
                   height={253} className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
@@ -72,8 +72,8 @@ export default async function Home() {
           <div className="font-semibold text-md border-b-2 border-b-orange-500"><Link href={"/blog"}>VIEW ALL</Link></div>
         </div>
       </div>
-      {mustReadPost.map((posts:any, index:number) => (
-      <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center" key={index}>
+      {mustReadPost.map((posts:any) => (
+      <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center" key={posts.id}>
 
       
 
@@ -111,9 +111,9 @@ export default async function Home() {
         </div>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:justify-items-center">
   
-        {trendingPosts.map((posts:any, index:number) => (
+        {trendingPosts.map((posts:any) => (
   
-        <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]" key={index}>
+        <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]" key={posts.id}>
         <Link href={"/blog/blog1"}><Image src={urlForImage(posts.image).url()} alt="Image One" width={380}
                     height={253} className="rounded-xl"/></Link>
             <div className="flex justify-between items-center px-2">
