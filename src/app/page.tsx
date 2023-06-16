@@ -73,11 +73,11 @@ export default async function Home() {
         </div>
       </div>
       {mustReadPost.map((posts:any, index:number) => (
-      <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center">
+      <div className="mt-4 mx-6 flex flex-col lg:flex-row justify-between items-center" key={index}>
 
       
 
-        <div className="lg:max-w-[50%] text-justify" key={index}>
+        <div className="lg:max-w-[50%] text-justify" >
             <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
             {posts.title}
           </h1>
