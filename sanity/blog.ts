@@ -30,13 +30,18 @@ export default defineType ( {
             }
           }),
           defineField({
+            name: "description",
+            title: "Blog Description",
+            type: "string"           
+        }),
+        defineField({
             name: "tableofcontent",
             title: "Table of Content",
             type: "blockContent",            
         }),
         defineField({
-            name: "description",
-            title: "Blog Description",
+            name: "body",
+            title: "Body",
             type: "blockContent",
             
         }),
