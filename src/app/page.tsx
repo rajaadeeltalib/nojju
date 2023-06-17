@@ -105,7 +105,7 @@ export default async function Home(slug: any) {
         </div> 
           
       </div>      
-      ))}; 
+      ))}
     </div>
     {/* must read section end */}
     {/* trending section started */}
