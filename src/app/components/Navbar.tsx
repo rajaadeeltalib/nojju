@@ -28,7 +28,7 @@ const Navbar = () => {
               <rect x="14" y="11" width="7" height="12" />
             </svg>
             <span className="ml-2 text-xl font-bold tracking-wide text-orange-500">
-              C<span className="text-neutral-600">ompany</span>
+              N<span className="text-neutral-600">OJJU</span>
             </span>
           </Link>
           <ul className="items-center hidden lg:flex ">
