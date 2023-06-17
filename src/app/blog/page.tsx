@@ -22,11 +22,11 @@ const AllBlogs = async() => {
       </div>
       <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3">
 
-      {blogsPosts.map((posts:any, index:number) => (
+      {blogsPosts.map((posts:any) => (
 
-      <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]" key={index}>
+      <div className="mt-12 mx-6 lg:mx-0  max-w-[380px]" key={posts.id}>
           <Link href={{
-                  pathname: `/blog/[Slug.current]`,
+                  pathname: `/blog/[slug.current]`,
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
