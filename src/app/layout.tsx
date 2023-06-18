@@ -4,6 +4,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+import GoogleAnalytics from "../googleanalytics/GoogleAnalytics";
 
 export const metadata = {
   title: 'Nojju',
@@ -19,7 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics ga_id= 
+            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
       <Navbar />
+      
+
+
         {children}
         <Footer />
         </body>
