@@ -2,7 +2,6 @@
 // import Trending from './components/Trending'
 // import MustRead from './components/MustRead'
 import Image from "next/image";
-import ImageOne from "../../../public/image1.jpg";
 import Link from "next/link"
 import { client } from "../lib/sanityClient";
 import { urlForImage } from "../../sanity/lib/image";
