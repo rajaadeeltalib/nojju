@@ -7,7 +7,7 @@ import { client } from "../lib/sanityClient";
 import { urlForImage } from "../../sanity/lib/image";
 
 const getLatestPosts = async (slug: any) => {
-  const res = await client.fetch(`*[_type=='posts' && latest=='Latest' || slug.current == '${slug.params.blog}']`);
+  const res = await client.fetch(`*[_type=='posts' && latest=='Latest' || slug.current == '${slug.params.blog}'] | order(date desc)`);
 
   return res;
 };
@@ -18,7 +18,7 @@ const getMustReadPost = async (slug: any) => {
   return res;
 };
 const getTrendingPosts = async (slug: any) => {
-  const res = await client.fetch(`*[_type=='posts' && trending=='Trending' || slug.current == '${slug.params.blog}']`);
+  const res = await client.fetch(`*[_type=='posts' && trending=='Trending' || slug.current == '${slug.params.blog}'] | order(date desc)`);
 
   return res;
 }

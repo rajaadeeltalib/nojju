@@ -69,10 +69,7 @@ export default defineType({
     defineField({
       name: "date",
       title: "Blog Date",
-      type: "date",
-      options: {
-        dateFormat: "YYYY-MM-DD",
-      },
+      type: "string",      
     }),
     defineField({
       name: "image",

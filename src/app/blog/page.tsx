@@ -6,7 +6,7 @@ import { urlForImage } from "../../../sanity/lib/image";
 
 
 const getBlogsPosts = async () => {
-  const res = await client.fetch(`*[_type=='posts']`);
+  const res = await client.fetch(`*[_type=='posts'] | order(date desc)`);
 
   return res;
 };

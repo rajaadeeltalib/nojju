@@ -21,7 +21,7 @@ const getdetailRead = async (slug: any) => {
 };
 const getdetailFeatured = async (slug: any) => {
   const res = await client.fetch(
-    `*[_type=='posts' && featured=='Featured' || slug.current == '${slug.params.blog}']`
+    `*[_type=='posts' && featured=='Featured' || slug.current == '${slug.params.blog}'] | order(date desc)`
   );
 
   return res;
@@ -143,19 +143,19 @@ const BlogPage = async (slug: any) => {
             <h4 className="border-b-2 border-b-orange-500 font-semibold text-md md:mx-4 lg:mx-0">
               Featured
             </h4>
-            {/* {detailFeatured.map((posts: any) => ( */}
+            {detailFeatured.map((posts: any) => (
               <div className="mt-12 mx-6 lg:mx-0  max-w-[300px]" 
-              // key={posts.id}
+              key={posts.id}
               >
                 <Link
                   href={{
                     pathname: `/blog/[Slug.current]`,
-                    query: { data: detailFeatured[0].slug.current },
+                    query: { data: posts.slug.current },
                   }}
-                  as={`/blog/${detailFeatured[0].slug.current}`}
+                  as={`/blog/${posts.slug.current}`}
                 >
                   <Image
-                    src={urlForImage(detailFeatured[0].image).url()}
+                    src={urlForImage(posts.image).url()}
                     alt="Image One"
                     width={380}
                     height={253}
@@ -163,18 +163,25 @@ const BlogPage = async (slug: any) => {
                   />
                 </Link>
                 <div className="flex justify-between items-center px-2">
-                  <h4 className="text-[12px] text-neutral-600">{detailFeatured[0].date}</h4>
+                  <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>
                   <h3 className="my-4 text-sm text-orange-500">
-                    {detailFeatured[0].category}
+                    {posts.category}
                   </h3>
                 </div>
                 <div className="">
                   <h1 className="text-md font-semibold border-b-2 border-b-orange-500 text-justify">
-                    {detailFeatured[0].title}
+                    {posts.title}
                   </h1>
+                  <p className="text-justify text-gray-600 ">{posts.description.substring(0, 200)}......<Link href={{
+                  pathname: `/blog/[Slug.current]`,
+                  query: { data: posts.slug.current },
+                }}
+                as={`/blog/${posts.slug.current}`}
+                className="text-orange-500"
+              >Read More</Link></p>
                 </div>
               </div>
-            {/* // ))} */}
+            ))}
           </div>
           {/* div closed */}
         </div>
