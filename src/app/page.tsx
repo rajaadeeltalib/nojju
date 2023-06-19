@@ -57,7 +57,13 @@ export default async function Home(slug: any) {
           <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500 text-justify">
           {posts.title} 
           </h1>
-          <p className="text-justify text-gray-600 ">{posts.description}</p>
+          <p className="text-justify text-gray-600 ">{posts.description.substring(0, 200)}......<Link href={{
+                  pathname: `/blog/[Slug.current]`,
+                  query: { data: posts.slug.current },
+                }}
+                as={`/blog/${posts.slug.current}`}
+                className="text-orange-500"
+              >Read More</Link></p>
           </div>
         </div>
         
@@ -139,7 +145,13 @@ export default async function Home(slug: any) {
             <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500 text-justify">
               {posts.title}
             </h1>
-            <p className="text-justify text-gray-600 ">{posts.description}</p>
+            <p className="text-justify text-gray-600 ">{posts.description.substring(0, 200)}......<Link href={{
+                  pathname: `/blog/[Slug.current]`,
+                  query: { data: posts.slug.current },
+                }}
+                as={`/blog/${posts.slug.current}`}
+                className="text-orange-500"
+              >Read More</Link></p>
             </div>
           </div>
           
