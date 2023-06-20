@@ -5,9 +5,11 @@ import { urlForImage } from "../../../../sanity/lib/image";
 import PortableText from "react-portable-text";
 import { Metadata } from "next";
 
-export async function generateMetadata(slug: any) {
+
+
+export async function generateMetadata(slug:any):Promise<Metadata> {
   const post = await getdetailPost(slug);
-  console.log(post)
+
   if (!post) {
     return {
       title: "Not Found",
