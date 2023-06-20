@@ -1,4 +1,8 @@
-import React from "react";
+export const metadata = {
+  title: 'Disclaimer',
+  description: 'We are using affiliate links on this Blog. This means that we may earn a commission if you click on the link and make a purchase, at no additional cost to you. The commissions earned through these affiliate links help support the maintenance and operation of the Blog. We only recommend products and services that we genuinely believe will provide value to our readers.',
+  keywords: 'disclaimer,'
+}
 
 const Disclaimer = () => {
   return (

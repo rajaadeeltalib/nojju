@@ -3,6 +3,26 @@ import Link from "next/link";
 import { client } from "../../../lib/sanityClient";
 import { urlForImage } from "../../../../sanity/lib/image";
 import PortableText from "react-portable-text";
+import { Metadata } from "next";
+
+export async function generateMetadata(slug: any) {
+  const post = await getdetailPost(slug);
+  console.log(post)
+  if (!post) {
+    return {
+      title: "Not Found",
+      description: "The page is not found",
+    };
+  }
+
+  return {
+    title: post[0].title,
+    description: post[0].description,
+   
+  };
+}
+
+
 
 const getdetailPost = async (slug: any) => {
   const res = await client.fetch(

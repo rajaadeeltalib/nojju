@@ -1,4 +1,8 @@
-import React from "react";
+export const metadata = {
+  title: 'Terms and Conditions',
+  description: 'By accessing this website we assume you accept these terms and conditions. Do not continue to use Nojju if you do not agree to take all of the terms and conditions stated on this page.',
+  keywords: 'terms and conditions'
+}
 
 const Terms = () => {
   return (

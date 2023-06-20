@@ -4,6 +4,11 @@ import Link from "next/link";
 import { client } from "../../lib/sanityClient";
 import { urlForImage } from "../../../sanity/lib/image";
 
+export const metadata = {
+  title: 'All Blog Posts',
+  description: 'Welcome to Nojju which is dedicated to the exciting world of camping! Whether you are an experienced outdoor enthusiast or a novice adventurer, our blog covers all aspects of camping, providing you with valuable insights, tips, and recommendations to enhance your camping experience.',
+  keywords: 'camping, Camping Tent, Sleeping bag, Camping stove, Camping chairs, Lantern/Flashlight, Cooler/Ice chest, Camping cookware set, Campfire grill, Hammock, Camping mattress/pad, Backpack, Water filter/purifier, Portable camping shower, Camping table, Campfire cooking utensils, Inflatable camping pillow, Portable camping toilet, First aid kit, Camping knife/multi-tool, Portable power bank/solar charger'
+}
 
 const getBlogsPosts = async () => {
   const res = await client.fetch(`*[_type=='posts'] | order(date desc)`);

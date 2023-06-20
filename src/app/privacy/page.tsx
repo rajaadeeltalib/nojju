@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Privacy Policy',
+  description: 'This Privacy Policy document contains types of information that is collected and recorded by Nojju and how we use it.',
+  keywords: 'privacy policy'
+}
+
 const Privacy = () => {
   return (
     <div className="container mx-auto">

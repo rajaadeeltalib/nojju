@@ -1,3 +1,11 @@
+export const metadata = {
+  title: 'Contact Us',
+  description: 'We value your feedback, questions, and suggestions. If you have any inquiries or need assistance, please feel free to reach out to us. We are here to help!',
+  keywords: 'contact, feedback, questions, suggestions'
+}
+
+
+
 const ContactUs = () => {
   return (
     <div className="container mx-auto">
