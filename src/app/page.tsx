@@ -7,7 +7,7 @@ import { client } from "../lib/sanityClient";
 import { urlForImage } from "../../sanity/lib/image";
 
 const getLatestPosts = async (slug: any) => {
-  const res = await client.fetch(`*[_type=='posts' && latest=='Latest' || slug.current == '${slug.params.blog}'] | order(date desc)`);
+  const res = await client.fetch(`*[_type=='posts' && latest=='Latest' || slug.current == '${slug.params.blog}'][0...6] | order(date desc)`);
 
   return res;
 };
@@ -18,7 +18,7 @@ const getMustReadPost = async (slug: any) => {
   return res;
 };
 const getTrendingPosts = async (slug: any) => {
-  const res = await client.fetch(`*[_type=='posts' && trending=='Trending' || slug.current == '${slug.params.blog}'] | order(date desc)`);
+  const res = await client.fetch(`*[_type=='posts' && trending=='Trending' || slug.current == '${slug.params.blog}'][0...6] | order(date desc)`);
 
   return res;
 }
@@ -91,7 +91,13 @@ export default async function Home(slug: any) {
             <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
             {posts.title}
           </h1>
-          <p className="text-gray-600">{posts.description}</p>
+          <p className="text-justify text-gray-600 ">{posts.description.substring(0, 300)}......<Link href={{
+                  pathname: `/blog/[Slug.current]`,
+                  query: { data: posts.slug.current },
+                }}
+                as={`/blog/${posts.slug.current}`}
+                className="text-orange-500"
+              >Read More</Link></p>
           </div>
         <div className="mt-12 mx-6 lg:mx-0">
         <Link href={{
