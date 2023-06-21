@@ -1,6 +1,5 @@
 import ImageOne from "../../../public/image1.jpg"
 import Image from "next/image";
-import Link from "next/link"
 import { client } from "../../lib/sanityClient";
 import { urlForImage } from "../../../sanity/lib/image";
 
