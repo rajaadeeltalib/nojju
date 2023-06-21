@@ -63,7 +63,7 @@ const BlogPage = async (slug: any) => {
             
               <Image
                 src={urlForImage(detailPost[0].image).url()}
-                alt="Image One"
+                alt={`${detailPost[0].title}`}
                 width={380}
                 height={253}
                 className="rounded-xl"
@@ -177,7 +177,7 @@ const BlogPage = async (slug: any) => {
                 >
                   <Image
                     src={urlForImage(posts.image).url()}
-                    alt="Image One"
+                    alt={`${posts.title}`}
                     width={380}
                     height={253}
                     className="rounded-xl"
@@ -230,7 +230,13 @@ const BlogPage = async (slug: any) => {
                 <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
                   {detailRead[0].title}
                 </h1>
-                <p className="text-gray-600">{detailRead[0].description}</p>
+                <p className="text-justify text-gray-600 ">{detailRead[0].description.substring(0, 300)}......<Link href={{
+                  pathname: `/blog/[Slug.current]`,
+                  query: { data: detailRead[0].slug.current },
+                }}
+                as={`/blog/${detailRead[0].slug.current}`}
+                className="text-orange-500"
+              >Read More</Link></p>
               </div>
               <div className="mt-12 mx-6 lg:mx-0">
                 <Link
@@ -242,7 +248,7 @@ const BlogPage = async (slug: any) => {
                 >
                   <Image
                     src={urlForImage(detailRead[0].image).url()}
-                    alt="Image One"
+                    alt={`${detailRead[0].title}`}
                     width={600}
                     height={800}
                     className="rounded-xl object-cover"

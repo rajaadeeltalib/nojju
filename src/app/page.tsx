@@ -46,7 +46,7 @@ export default async function Home(slug: any) {
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
-              ><Image src={urlForImage(posts.image).url()} alt="Image One" width={380}
+              ><Image src={urlForImage(posts.image).url()} alt={`${posts.title}`} width={380}
                   height={253} className="rounded-xl"/></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>
@@ -105,7 +105,7 @@ export default async function Home(slug: any) {
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
-              ><Image src={urlForImage(posts.image).url()} alt="Image One" width={600}
+              ><Image src={urlForImage(posts.image).url()} alt={`${posts.title}`} width={600}
                   height={800} className="rounded-xl object-cover"/></Link>
           {/* <Image src={ImageOne} alt="Image One" width={600} height={800}/> */}
           <div className="flex justify-between items-center text-slate-400">
@@ -140,7 +140,7 @@ export default async function Home(slug: any) {
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
-              ><Image src={urlForImage(posts.image).url()} alt="Image One" width={380}
+              ><Image src={urlForImage(posts.image).url()} alt={`${posts.title}`} width={380}
                     height={253} className="rounded-xl"/></Link>
             <div className="flex justify-between items-center px-2">
             <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>
