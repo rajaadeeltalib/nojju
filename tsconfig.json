@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "sanity/blockContent.ts", "src/app/sitemap.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "sanity/blockContent.ts", "src/app/sitemap.ts", "src/app/api/sitemap/route.js"],
   "exclude": ["node_modules"]
 }
