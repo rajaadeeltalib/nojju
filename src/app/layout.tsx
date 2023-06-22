@@ -13,8 +13,12 @@ export const metadata:Metadata = {
     template: '%s | Nojju',
   },
   description: 'Unleashing Outdoor Camping Adventures and Products Insights',
-  keywords: 'camping, Camping Tent, Sleeping bag, Camping stove, Camping chairs, Lantern/Flashlight, Cooler/Ice chest, Camping cookware set, Campfire grill, Hammock, Camping mattress/pad, Backpack, Water filter/purifier, Portable camping shower, Camping table, Campfire cooking utensils, Inflatable camping pillow, Portable camping toilet, First aid kit, Camping knife/multi-tool, Portable power bank/solar charger,'
+  keywords: 'camping, Camping Tent, Sleeping bag, Camping stove, Camping chairs, Lantern/Flashlight, Cooler/Ice chest, Camping cookware set, Campfire grill, Hammock, Camping mattress/pad, Backpack, Water filter/purifier, Portable camping shower, Camping table, Campfire cooking utensils, Inflatable camping pillow, Portable camping toilet, First aid kit, Camping knife/multi-tool, Portable power bank/solar charger,',
+  verification: {
+    google:"czrSo0Na4yV7AyXssppMJRQ0-jvBUCyG03LE8IgkEqk",
+  }
 }
+
 
 export default function RootLayout({
   children,
