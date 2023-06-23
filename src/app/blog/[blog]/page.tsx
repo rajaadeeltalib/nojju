@@ -264,7 +264,7 @@ const BlogPage = async (slug: any) => {
               </div>
             </div>
           {/* // ))} */}
-          ;
+          
         </div>
       </div>
     </div>
