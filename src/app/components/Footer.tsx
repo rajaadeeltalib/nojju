@@ -141,10 +141,10 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingheadlamp"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Camping cookware
+                    Camping Headlamp
                   </Link>
                 </li>
                 <li>
