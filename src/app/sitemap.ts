@@ -52,7 +52,43 @@ const blogUrl = "https://www.nojju.com/blog/";
             url: `${baseUrl}disclaimer`,
             lastModified: new Date(),
         },
-
+        {
+            url: `${baseUrl}campingtent`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campingsleepingbag`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campingstove`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campingchair`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campinglantern`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campingcooler`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campingpillow`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campingtoilet`,
+            lastModified: new Date(),
+        },
+        {
+            url: `${baseUrl}campingtable`,
+            lastModified: new Date(),
+        },
+        
         ...data,
         
     

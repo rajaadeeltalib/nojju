@@ -88,7 +88,7 @@ export const Footer = () => {
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingtent"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
                     Camping Tent
@@ -96,31 +96,31 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingsleepingbag"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Sleeping bag
+                    Camping Sleeping Bag
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingstove"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Camping stove
+                    Camping Stove
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingchair"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Camping chairs
+                    Camping Chair
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campinglantern"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
                     Camping Lantern
@@ -133,7 +133,7 @@ export const Footer = () => {
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingcooler"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
                     Camping Cooler
@@ -149,26 +149,26 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingpillow"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Camping pillow
+                    Camping Pillow
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingtoilet"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Camping toilet
+                    Camping Toilet
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/campingtable"
                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Camping table
+                    Camping Table
                   </Link>
                 </li>
               </ul>
