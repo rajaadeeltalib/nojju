@@ -88,6 +88,10 @@ const blogUrl = "https://www.nojju.com/blog/";
             url: `${baseUrl}campingtable`,
             lastModified: new Date(),
         },
+        {
+            url: `${baseUrl}campingheadlamp`,
+            lastModified: new Date(),
+        },
         
         ...data,
         
