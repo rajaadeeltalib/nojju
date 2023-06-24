@@ -4,9 +4,9 @@ import { client } from "../../lib/sanityClient";
 import { urlForImage } from "../../../sanity/lib/image";
 
 export const metadata = {
-  title: 'All Blog Posts',
-  description: 'Welcome to Nojju which is dedicated to the exciting world of camping! Whether you are an experienced outdoor enthusiast or a novice adventurer, our blog covers all aspects of camping, providing you with valuable insights, tips, and recommendations to enhance your camping experience.',
-  keywords: 'camping, Camping Tent, Sleeping bag, Camping stove, Camping chairs, Lantern/Flashlight, Cooler/Ice chest, Camping cookware set, Campfire grill, Hammock, Camping mattress/pad, Backpack, Water filter/purifier, Portable camping shower, Camping table, Campfire cooking utensils, Inflatable camping pillow, Portable camping toilet, First aid kit, Camping knife/multi-tool, Portable power bank/solar charger'
+  title: 'Camping Headlamp',
+  description: 'Discover the perfect camping headlamp for hands-free illumination during your outdoor adventures.',
+  keywords: 'camping headlamp, outdoor headlamp, portable headlamp, LED headlamp, hands-free headlamp, camping lighting, camping gear, camping essentials, lightweight headlamp, adjustable headlamp, camping accessories, camping safety, headlamp for camping, hiking headlamp, camping headlamp reviews,'
 }
 
 const getCampingHeadLampPosts = async () => {
@@ -22,7 +22,7 @@ const CampingHeadLamp = async() => {
   return (
     <div className="container mx-auto lg:pl-8">
       <div className="flex justify-center text-2xl font-bold mt-10 text-orange-500">
-        <h1>ALL BLOGS</h1>
+        <h1>ALL CAMPING HEADLAMP BLOGS</h1>
       </div>
       <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3">
 

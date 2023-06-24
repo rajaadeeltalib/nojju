@@ -10,7 +10,7 @@ const ContactUs = () => {
   return (
     <div className="container mx-auto">
       <div className="text-2xl font-bold my-8 flex justify-center">
-        <h2>Contact Us</h2>
+        <h1>Contact Us</h1>
       </div>
       <div className="text-justify my-8 mx-6 leading-8">
         <p>
