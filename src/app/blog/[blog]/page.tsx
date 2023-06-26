@@ -153,7 +153,7 @@ const BlogPage = async (slug: any) => {
               <div className="flex justify-center my-8">
                 <button className="bg-orange-500 text-white text-lg font-bold px-4 py-4 rounded-full">
                   <Link href={detailPost[0].link} target="_blank">
-                    Buy From Amazon
+                    Check Price On Amazon
                   </Link>
                 </button>
               </div>
