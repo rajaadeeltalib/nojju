@@ -13,7 +13,7 @@ export const metadata:Metadata = {
     template: '%s | Nojju',
   },
   description: 'Discover the best camping gear for your outdoor adventures. From camping tents and sleeping bags to portable stoves and lanterns, our blog provides expert reviews, recommendations, and product guides.',
-  keywords: 'camping gear, Hiking Gear, Camping Tent, Sleeping bag, Camping stove, Camping chairs, Lantern/Flashlight, Cooler/Ice chest, Camping cookware set, Campfire grill, Hammock, Camping mattress/pad, Backpack, Water filter/purifier, Portable camping shower, Camping table, Campfire cooking utensils, Inflatable camping pillow, Portable camping toilet, First aid kit, Camping knife, multi-tool, Portable power bank/solar charger,',
+  keywords: 'Camping gear, Hiking Gear, Camping Tent, Sleeping bag, Camping stove, Camping chairs, Lantern/Flashlight, Cooler/Ice chest, Camping cookware set, Campfire grill, Hammock, Camping mattress/pad, Backpack, Water filter/purifier, Portable camping shower, Camping table, Campfire cooking utensils, Inflatable camping pillow, Portable camping toilet, First aid kit, Camping knife, multi-tool, Portable power bank/solar charger,',
   verification: {
     google:"czrSo0Na4yV7AyXssppMJRQ0-jvBUCyG03LE8IgkEqk",
   }
