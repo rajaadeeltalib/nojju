@@ -81,5 +81,10 @@ export default defineType({
       title: "Product Link",
       type: "url",
     }),
+    defineField({
+      name: "keywords",
+      title: "Product Keywords",
+      type: "string",
+    }),
   ],
 });
