@@ -20,7 +20,7 @@ export async function generateMetadata(slug:any):Promise<Metadata> {
   return {
     title: post[0].title,
     description: post[0].description,
-    
+    keywords: post[0].keywords,
    
   };
 }
