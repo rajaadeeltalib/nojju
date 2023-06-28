@@ -21,7 +21,7 @@ const ContactUs = () => {
         <p>
           Email:{" "}
           <a href="mailto:support@nojju.com" target="_new">
-            support@nojju.com
+            nojju.com@gmail.com
           </a>
         </p>
         <p>

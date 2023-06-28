@@ -93,6 +93,9 @@ const BlogPage = async (slug: any) => {
                       h3: (props: any) => (
                         <h3 className="text-xl font-bold my-5" {...props} />
                       ),
+                      h4: (props: any) => (
+                        <h4 className="text-lg font-bold my-5" {...props} />
+                      ),
                       li: ({ children }: any) => (
                         <li className="ml-4 list-disc? list-decimal">
                           {" "}
@@ -101,12 +104,12 @@ const BlogPage = async (slug: any) => {
                       ),
 
                       link: ({ href, children }: any) => (
-                        <a
+                        <Link
                           href={href}
                           className="text-blue-600 hover:underline"
                         >
                           {children}
-                        </a>
+                        </Link>
                       ),
                     }}
                   />
@@ -139,13 +142,16 @@ const BlogPage = async (slug: any) => {
                     h3: (props: any) => (
                       <h3 className="text-xl font-bold my-5" {...props} />
                     ),
+                    h4: (props: any) => (
+                      <h4 className="text-lg font-bold my-5" {...props} />
+                    ),
                     li: ({ children }: any) => (
                       <li className="ml-4 list-disc"> {children}</li>
                     ),
                     link: ({ href, children }: any) => (
-                      <a href={href} className="text-blue-600 hover:underline">
+                      <Link href={href} className="text-blue-600 hover:underline">
                         {children}
-                      </a>
+                      </Link>
                     ),
                   }}
                 />
