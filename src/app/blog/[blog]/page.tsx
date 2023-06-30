@@ -12,7 +12,7 @@ export async function generateMetadata(slug:any):Promise<Metadata> {
 
   if (!post) {
     return {
-      title: "Not Found",
+      title: "Not Found.",
       description: "The page is not found",
     };
   }
