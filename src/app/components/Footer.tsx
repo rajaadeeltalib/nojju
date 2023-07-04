@@ -43,7 +43,7 @@ export const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
             <div>
-              <p className="font-semibold tracking-wide text-gray-800">
+              <p className="font-semibold tracking-wide text-gray-800 border-b-2 border-b-orange-500">
                 Business
               </p>
               <ul className="mt-2 space-y-2">
@@ -82,7 +82,7 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-gray-800">
+              <p className="font-semibold tracking-wide text-gray-800 border-b-2 border-b-orange-500">
                 Features
               </p>
               <ul className="mt-2 space-y-2">
@@ -129,7 +129,7 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-gray-800">Explore</p>
+              <p className="font-semibold tracking-wide text-gray-800 border-b-2 border-b-orange-500">Explore</p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
@@ -174,7 +174,7 @@ export const Footer = () => {
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-gray-800">General</p>
+              <p className="font-semibold tracking-wide text-gray-800 border-b-2 border-b-orange-500">General</p>
               <ul className="mt-2 space-y-2">
                 
                 <li>

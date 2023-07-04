@@ -66,7 +66,7 @@ const BlogPage = async (slug: any) => {
                 alt={`${detailPost[0].title}`}
                 width={380}
                 height={253}
-                className="rounded-xl"
+                
               />
             
             <div className="border border-gray-500 my-10 px-4">
@@ -186,7 +186,7 @@ const BlogPage = async (slug: any) => {
                     alt={`${posts.title}`}
                     width={380}
                     height={253}
-                    className="rounded-xl"
+                    
                   />
                 </Link>
                 <div className="flex justify-between items-center px-2">
@@ -204,7 +204,7 @@ const BlogPage = async (slug: any) => {
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
-                className="text-orange-500"
+                className="text-orange-500 block"
               >Read More</Link></p>
                 </div>
               </div>
@@ -241,7 +241,7 @@ const BlogPage = async (slug: any) => {
                   query: { data: detailRead[0].slug.current },
                 }}
                 as={`/blog/${detailRead[0].slug.current}`}
-                className="text-orange-500"
+                className="text-orange-500 block"
               >Read More</Link></p>
               </div>
               <div className="mt-12 mx-6 lg:mx-0">
@@ -257,7 +257,7 @@ const BlogPage = async (slug: any) => {
                     alt={`${detailRead[0].title}`}
                     width={600}
                     height={800}
-                    className="rounded-xl object-cover"
+                    className="object-cover"
                   />
                 </Link>
                 {/* <Image src={ImageOne} alt="Image One" width={600} height={800}/> */}
