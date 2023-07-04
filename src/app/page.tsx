@@ -47,7 +47,7 @@ export default async function Home(slug: any) {
                 }}
                 as={`/blog/${posts.slug.current}`}
               ><Image src={urlForImage(posts.image).url()} alt={`${posts.title}`} width={380}
-                  height={253} className="rounded-xl"/></Link>
+                  height={253} /></Link>
           <div className="flex justify-between items-center px-2">
           <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>
           <h3 className="my-4 text-sm text-orange-500">{posts.category}</h3>
@@ -56,12 +56,12 @@ export default async function Home(slug: any) {
           <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500 text-justify">
           {posts.title} 
           </h1>
-          <p className="text-justify text-gray-600 ">{posts.description.substring(0, 200)}......<Link href={{
+          <p className="text-justify text-gray-600 text-sm">{posts.description.substring(0, 200)}......<Link href={{
                   pathname: `/blog/[Slug.current]`,
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
-                className="text-orange-500"
+                className="text-orange-500 block"
               >Read More</Link></p>
           </div>
         </div>
@@ -91,12 +91,12 @@ export default async function Home(slug: any) {
             <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
             {posts.title}
           </h1>
-          <p className="text-justify text-gray-600 ">{posts.description.substring(0, 300)}......<Link href={{
+          <p className="text-justify text-gray-600 text-sm">{posts.description.substring(0, 500)}......<Link href={{
                   pathname: `/blog/[Slug.current]`,
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
-                className="text-orange-500"
+                className="text-orange-500 block"
               >Read More</Link></p>
           </div>
         <div className="mt-12 mx-6 lg:mx-0">
@@ -106,7 +106,7 @@ export default async function Home(slug: any) {
                 }}
                 as={`/blog/${posts.slug.current}`}
               ><Image src={urlForImage(posts.image).url()} alt={`${posts.title}`} width={600}
-                  height={800} className="rounded-xl object-cover"/></Link>
+                  height={800} className=" object-cover"/></Link>
           {/* <Image src={ImageOne} alt="Image One" width={600} height={800}/> */}
           <div className="flex justify-between items-center text-slate-400">
           <h4 className="text-[12px]">{posts.date}</h4>
@@ -141,7 +141,7 @@ export default async function Home(slug: any) {
                 }}
                 as={`/blog/${posts.slug.current}`}
               ><Image src={urlForImage(posts.image).url()} alt={`${posts.title}`} width={380}
-                    height={253} className="rounded-xl"/></Link>
+                    height={253} /></Link>
             <div className="flex justify-between items-center px-2">
             <h4 className="text-[12px] text-neutral-600">{posts.date}</h4>
             <h3 className="my-4 text-sm text-orange-500">{posts.category}</h3>
@@ -150,12 +150,12 @@ export default async function Home(slug: any) {
             <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500 text-justify">
               {posts.title}
             </h1>
-            <p className="text-justify text-gray-600 ">{posts.description.substring(0, 200)}......<Link href={{
+            <p className="text-justify text-gray-600 text-sm">{posts.description.substring(0, 200)}......<Link href={{
                   pathname: `/blog/[Slug.current]`,
                   query: { data: posts.slug.current },
                 }}
                 as={`/blog/${posts.slug.current}`}
-                className="text-orange-500"
+                className="text-orange-500 block"
               >Read More</Link></p>
             </div>
           </div>
