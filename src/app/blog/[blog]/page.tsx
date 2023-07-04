@@ -42,7 +42,7 @@ const getdetailRead = async (slug: any) => {
 };
 const getdetailFeatured = async (slug: any) => {
   const res = await client.fetch(
-    `*[_type=='posts' && featured=='Featured' || slug.current == '${slug.params.blog}'][0...5] | order(date asc)`
+    `*[_type=='posts' && featured=='Featured' || slug.current == '${slug.params.blog}'][0...5] | order(_createdAt asc)`
   );
 
   return res;
