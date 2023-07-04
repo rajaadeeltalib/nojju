@@ -10,7 +10,7 @@ export const metadata = {
 }
 
 const getBlogsPosts = async () => {
-  const res = await client.fetch(`*[_type=='posts'] | order(date desc)`);
+  const res = await client.fetch(`*[_type=='posts'] | order(_createdAt desc)`);
 
   return res;
 };
