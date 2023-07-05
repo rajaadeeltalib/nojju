@@ -24,7 +24,7 @@ const Card = async() => {
             <h3 className="my-4 text-sm text-orange-500">{posts.category}</h3>
           </div>
           <div className="">
-            <h1 className="text-md font-semibold border-b-2 border-b-orange-500 text-justify">
+            <h1 className="text-md font-semibold border-b-2 border-b-orange-500 text-justify block">
               {posts.title}
             </h1>
           </div>
