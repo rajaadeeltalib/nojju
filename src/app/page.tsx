@@ -54,7 +54,7 @@ export default async function Home(slug: any) {
           </div>
           <div className="">
           <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500 text-justify">
-          {posts.title} 
+          <Link href={`/blog/${posts.slug.current}`}>{posts.title}</Link>
           </h1>
           <p className="text-justify text-gray-600 text-sm">{posts.description.substring(0, 200)}......<Link href={{
                   pathname: `/blog/[Slug.current]`,
@@ -89,7 +89,7 @@ export default async function Home(slug: any) {
 
         <div className="lg:max-w-[50%] text-justify" >
             <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500">
-            {posts.title}
+            <Link href={`/blog/${posts.slug.current}`}>{posts.title}</Link>
           </h1>
           <p className="text-justify text-gray-600 text-sm">{posts.description.substring(0, 500)}......<Link href={{
                   pathname: `/blog/[Slug.current]`,
@@ -148,7 +148,7 @@ export default async function Home(slug: any) {
             </div>
             <div className="">
             <h1 className="my-4 text-xl font-semibold border-b-2 border-b-orange-500 text-justify">
-              {posts.title}
+            <Link href={`/blog/${posts.slug.current}`}>{posts.title}</Link>
             </h1>
             <p className="text-justify text-gray-600 text-sm">{posts.description.substring(0, 200)}......<Link href={{
                   pathname: `/blog/[Slug.current]`,
