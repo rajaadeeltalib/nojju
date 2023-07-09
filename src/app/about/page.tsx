@@ -14,7 +14,7 @@ const AboutUs = () => {
       <h2>Welcome to Nojju!</h2>
         <p>
           At Nojju, we are passionate about camping and the great outdoors. We
-          believe that, spending time in nature is not just a recreational
+          believe that spending time in nature is not just a recreational
           activity but a transformative experience that brings joy, relaxation,
           and a deeper connection with ourselves and the world around us. Our
           mission is to provide you with valuable insights, expert advice, and
